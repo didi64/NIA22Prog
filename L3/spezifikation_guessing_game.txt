@@ -1,0 +1,7 @@
+Spezifikation:
+
+- Eine Zufallszahl zwischen 1 und 100 wird gew&auml;hlt.
+- Der Benutzer wird solange nach zur Eingabe einer Zahl aufgefordert, bis er die Zahl erraten hat.  
+  Es wird ausgegeben, ob die Zahl zu gross oder zu klein ist.
+- Wurde die Zahl erraten, werden Anzahl Versuche ausgebegen.  
+  In tabellarischer Form werden alle Versuche und ihre Bewertung (zu gross, zu klein, korrekt) ausgegeben.

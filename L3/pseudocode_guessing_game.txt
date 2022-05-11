@@ -1,0 +1,12 @@
+Pseudocode
+```python
+nbr = zufallszahl zw. 1 und 5
+history = []
+
+wiederhole bis Zahl erraten:
+    n = eingegebene_Zahl
+    comment = evaluate(n) # [ok, zu klein, zu gross]
+    history.append((n, comment))
+    
+show_history(history) # history tabellarisch ausgeben
+```

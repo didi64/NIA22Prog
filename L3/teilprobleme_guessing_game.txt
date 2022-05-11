@@ -1,0 +1,7 @@
+Lose Teilprobleme:  
+- Zufallszahl erzeugen  
+- Interger als Input bekommen  
+- Vermutung evaluieren: richtig, zu klein, zu gross 
+- Versuche in geeigneter Form abspeichern  
+- Versuche formatiert ausgeben  
+- solange nach Zahl fragen, bis Zahl gleich Zufallszahl
