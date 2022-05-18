@@ -2,14 +2,14 @@ LOWER = 1
 UPPER = 5
 nbr = 4
 
-while True:
+n = None
+while n != nbr:
     n = input('Zahl zwischen {a} und {b}'.format(a=LOWER, b=UPPER))
     n = int(n)
     
-    if  n == nbr:
-        print('correct!')
-        break
-    elif n < nbr:
+    if  n < nbr:
         print('too small')
-    else:
+    elif n == nbr:
+        print('correct')
+    else:    
         print('too big')    
