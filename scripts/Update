@@ -23,7 +23,7 @@ else
 fi
 
 # use without arguments, just update everything
-if [[ "$option" -eq "-f" ]]; then
+if [[ "$options" -eq "-f" ]]; then
   git -C $GIT  reset --hard HEAD
 fi
 
