@@ -1,34 +1,18 @@
 import random
-from toolbox import sign
+from toolbox import sign, table2str
 
-def show_history(h):
-    '''displays the list h as a table
-       h: list of tuples, [(bool, str),...]
+def history2table(h):
+    '''returns a string, representing h as a table 
+    
+       h: list of tuples, [(guess, comment),...]
     '''
-    COL_WIDTHS = (4, 10, 10)
-    TABLE_WIDTH = sum(COL_WIDTHS) + 2 + 2
-    
-    h1 = 'Nr.'.ljust(COL_WIDTHS[0])
-    h2 = 'guess'.ljust(COL_WIDTHS[1]) 
-    h3 = 'comment'.ljust(COL_WIDTHS[2]) 
-    
-    hline = TABLE_WIDTH * '='
-    print(hline)
-    print('|{h1}|{h2}|{h3}|'.format(h1=h1, h2=h2, h3=h3))
-    print(hline)
-    
-    for i, (n, comment) in enumerate(h):
-        print('|{c1}|{c2}|{c3}|'.\
-              format(c1 = str(i+1).ljust(COL_WIDTHS[0]), 
-                     c2 = str(n).ljust(COL_WIDTHS[1]), 
-                     c3 = comment.ljust(COL_WIDTHS[2])
-                    )
-             )
-        
-    print(hline)    
+    header = ('Nr.', 'guess', 'comment')
+    rows =  [(str(i), str(n), c) for i, (n, c) in enumerate(h)]    
+    return table2str(header, rows)
 
 def eval_guess(guess, n):
     '''returns a tuple (is_ok: bool, comment: str)
+    
        is_ok: True, if guess equals n
        comment: 'too big', 'correct' or 'too small'
     '''
@@ -48,19 +32,19 @@ def play_game(lower=0, upper=100):
     nbr = random.randint(lower, upper)
     history = []
     
-    while True:
+    is_correct = False
+    while not is_correct:
         n = input('Zahl zwischen {a} und {b}? '.format(a=lower, b=upper))
         n = int(n)
         is_correct, comment = eval_guess(n, nbr)
-        history.append((n, comment))    
+        history.append((n, comment))   
         
-        if is_correct:
-            break
-        else:
-            print(comment)
+        print(comment)
         
+        
+    table = history2table(history)
     print('Congrats! You guessed the number {N} in {n} tries.'.format(N=nbr, n=len(history)))
-    show_history(history)
+    print(table)
     
     
 if __name__ == '__main__':
