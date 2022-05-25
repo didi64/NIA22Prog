@@ -1,0 +1,7 @@
+0:Fibonnacci.ipynb Klasse_bsp.ipynb
+1:Erste_Schritte_1.ipynb  Erste_Schritte_2.ipynb
+2:JupyterlabBasics.ipynb 
+3:SyntaxSemantik.ipynb Variables.ipynb Packing_Unpacking_1.ipynb IO_1.ipynb
+4:Idee2Programm.ipynb Funktionen.ipynb Kontrollstrukturen.ipynb Formatierte_Ausgabe.ipynb  Formatierte_Ausgabe_2.ipynb Loesungen_L4.ipynb Schritte_zu_table2str.ipynb
+5:Formatierte_Ausgabe.ipynb  Formatierte_Ausgabe_2.ipynb guessing_game.ipynb Kontrollstrukturen.ipynb Loesungen_L4.ipynb Schritte_zu_table2str.ipynb
+
