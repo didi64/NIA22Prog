@@ -1,0 +1,46 @@
+#!/usr/bin/bash -x
+
+#!/usr/bin/bash -x
+
+url="https://github.com/didi64/NIA22Prog.git"
+USER=$(whoami)
+GIT="/home/$USER/work/NIA22Prog"
+work="/home/$USER/work"
+notebooks="$work/notebooks"
+contents="${GIT}/contents.txt"
+
+
+is_number='^[0-9]+$'
+help="\nUsage: Update [<file>| <number>]\n\nWithout arguments all files are updated, but not copied.\nOtherwise, the file or all files from lessen <number> are updated and copied to notebooks"
+
+# use without arguments, just update everything
+if [[ "$#" -eq 0 ]]; then
+  git -C $GIT  reset --hard HEAD
+  git -C $GIT pull
+  find "$GIT" -type f -name "*.ipynb" -exec chmod 444 {} \;
+  echo -e "$help"
+  exit 0 
+fi
+
+# update everything
+git -C $GIT  reset --hard HEAD
+git -C $GIT pull
+find "$GIT" -type f -name "*.ipynb" -exec chmod 444 {} \;
+
+# process args
+for item in "$@"; do
+  echo "processing arg $item"
+  if [[ $item =~ $is_number ]] ; then
+    # get files 
+    files=$(sed -n -e "s/^${item}:\(.*\)/\1/p" "$contents")
+    for file in ${files[@]}; do
+      find "$GIT" -type f -name ${file} -exec cp -i {} "$notebooks" \;
+      find "$notebooks" -type f -name "*.ipynb" -exec chmod 644 {} \;
+    done
+  else
+    find "$GIT" -type f -name ${item} -exec cp -i {} "$notebooks" \;
+    chmod 644 "$notebooks/$item"
+  fi  
+done
+
+echo -e "$help"
