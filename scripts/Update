@@ -11,7 +11,7 @@ contents="${GIT}/contents.txt"
 
 
 is_number='^[0-9]+$'
-help="\nUsage: Update [<file>| <number>]\n\nWithout arguments all files are updated, but not copied.\nOtherwise, the file or all files from lessen <number> are updated and copied to notebooks"
+help="\nUsage: Update [<file>| <number>]\n\nWithout arguments all files are updated, but not copied.\nOtherwise, the file or all files from lessen <number> are updated and copied to notebooks\nIn case of errors: try Update -f [<file>| <number>]"
 
 # use without arguments, just update everything
 if [[ "$#" -eq 0 ]]; then
