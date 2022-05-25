@@ -1,4 +1,4 @@
-#!/usr/bin/bash 
+#!/usr/bin/bash -x
 
 #!/usr/bin/bash -x
 
@@ -17,13 +17,13 @@ help="\nUsage: Update [<file>| <number>]\n\nWithout arguments all files are upda
 if [[ "$1" != "-f" ]]; then
   args=("$@")  
 else
-  $options="-f"
+  options="-f"
   args=("$@")
   unset 'args[0]'
 fi
 
 # use without arguments, just update everything
-if [[ "$options" -eq "-f" ]]; then
+if [[ "$options" == "-f" ]]; then
   git -C $GIT  reset --hard HEAD
 fi
 
