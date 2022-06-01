@@ -4,3 +4,5 @@
 3:SyntaxSemantik.ipynb Variables.ipynb Packing_Unpacking_1.ipynb IO_1.ipynb
 4:Idee2Programm.ipynb Funktionen.ipynb Kontrollstrukturen.ipynb Formatierte_Ausgabe.ipynb  Formatierte_Ausgabe_2.ipynb Loesungen_L4.ipynb Schritte_zu_table2str.ipynb
 5:Formatierte_Ausgabe.ipynb  Formatierte_Ausgabe_2.ipynb guessing_game.ipynb Kontrollstrukturen.ipynb Loesungen_L4.ipynb Loesungen_L5.ipynb Schritte_zu_table2str.ipynb range.ipynb Iterieren_ueber_Listen.ipynb Listcomprehension.ipynb
+6:table2str.ipynb LogischeOperatoren.ipynb built_ins.ipynb Operatorprioritaeten.ipynb SliceNotation.ipynb guessing_game.ipynb Loesungen_L5.ipynb Loesungen_L6.ipynb dictionaries.ipynb Sprachdedektion.iynb Kontrollstrukturen.ipynb
+101: lambda_expressions.ipynb
