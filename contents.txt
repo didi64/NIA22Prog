@@ -9,4 +9,4 @@
 8:Loesungen_L8.ipynb minitoolbox.py Imports_I.ipynb Imports_II.ipynb tools Scope.ipynb Variadic_Functions.ipynb
 101:lambda_expressions.ipynb
 102:calculator.ipynb
-103:Experminents_with_Classes_I.ipynb, Experminents_with_Classes_II.ipynb, HandmadeClass.ipynb
+103:Experiments_with_Classes_I.ipynb, Expermients_with_Classes_II.ipynb, HandmadeClass.ipynb
