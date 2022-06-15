@@ -3,6 +3,26 @@ Collection of usefull functions
 type 'help(toolbox)' for more help
 '''
 
+def is_number(x):
+    '''returns True if x is an int or a float'''
+    try:
+        int(x)
+    except ValueError:
+        try:
+            float(x)
+        except ValueError:
+            return False
+    return True    
+
+def str2number(x):
+    '''returns int(x) or float(x) or x'''
+    if not is_number(x):
+        return x
+    try:
+        int(x)
+    except ValueError:
+        return  float(x)
+    return int(x)
 
 def sign(x):
     '''returns the sign of the number x'''
@@ -20,7 +40,10 @@ def table2str(header, rows, sep = ' │ ', fillchar = ' ', hline_char = '━'):
         fstring = (sep+'{}') * len(row) + sep
         args = []
         for s, w in zip(row, widths):
-            s = str(s).ljust(w, fillchar)
+            if type(s) == int or type(s) == float:
+                s = str(s).rjust(w, fillchar)
+            else:    
+                s = str(s).ljust(w, fillchar)
             args.append(s)
    
         return fstring.format(*args)

@@ -15,8 +15,9 @@ def print_PI():
 PI = 3.1415926535
 
 print('minitoolbox.py ausgefuehrt')
-# Die Variable __name__ ist offenbar definiert
-# Wir werden noch sehen, was es mit dieser Variable auf sich hat
+
+# nach 'import minitoolbox' hat
+# die Variable __name__ den Wert 'minitoolbox'
 print("{} = '{}'".format('__name__', __name__)) 
 
 # test double
