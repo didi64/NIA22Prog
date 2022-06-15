@@ -10,4 +10,4 @@
 9: Scope.ipynb
 101:lambda_expressions.ipynb
 102:calculator.ipynb
-103:Experimentieren_mit_Klassen.ipynb, HandmadeClass.ipynb
+103:Experimentieren_mit_Klassen.ipynb HandmadeClass.ipynb
