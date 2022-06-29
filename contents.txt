@@ -6,8 +6,9 @@
 5:Formatierte_Ausgabe.ipynb  Formatierte_Ausgabe_2.ipynb guessing_game.ipynb Kontrollstrukturen.ipynb Loesungen_L4.ipynb Loesungen_L5.ipynb Schritte_zu_table2str.ipynb range.ipynb Iterieren_ueber_Listen.ipynb Listcomprehension.ipynb
 6:table2str.ipynb LogischeOperatoren.ipynb Operatorprioritaeten.ipynb SliceNotation.ipynb guessing_game.ipynb Loesungen_L5.ipynb Loesungen_L6.ipynb dictionaries.ipynb Sprachdedektion.iynb
 7:dictionaries.ipynb Sprachdetektion.ipynb Files.ipynb built_ins.ipynb Loesungen_L7.ipynb Aufgaben_dict.ipynb
-8:cities.ipynb Aufgabe_cities.ipynb cities_.txt
-9:Scope.ipynb Variadic_Functions.ipynb Loesungen_L9.ipynb minitoolbox.py Imports_I.ipynb Imports_II.ipynb tools more_cities.ipynb Aufgabe_cities.ipynb
+8:Loesung_cities1.ipynb Aufgabe_cities.ipynb cities_.txt
+9:Variadic_Functions.ipynb Loesungen_L9.ipynb  Loesung_cities2.ipynb Aufgabe_cities.ipynb
+10:Scope.ipynb  Loesungen_L10.ipynb minitoolbox.py Imports_I.ipynb Imports_II.ipynb tools widgets.ipynb Objekte_speichern.ipynb Staedtedaten_putzen.ipynb
 101:lambda_expressions.ipynb more_cities.ipynb
 102:calculator.ipynb
 103:Experimentieren_mit_Klassen.ipynb HandmadeClass.ipynb
