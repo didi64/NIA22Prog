@@ -16,10 +16,10 @@ help="\nUsage: Update [<file>| <number>]\n\nWithout arguments all files are upda
 # function
 process_file () {
   if [[ "$1" != *"."* ]]; then
-    #echo "folder: $1"
+    echo "folder: $1"
     find "$GIT" -type d -name $1 -exec cp -ri {} "$notebooks" \;
   else 
-    #echo "file: $file"
+    echo "file: $file"
     find "$GIT" -type f -name $1 -exec cp -i {} "$notebooks" \;
     find "$notebooks" -type f -name "*.ipynb". -exec chmod 644 {} \;
   fi
