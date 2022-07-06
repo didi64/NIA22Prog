@@ -15,14 +15,9 @@ help="\nUsage: Update [<file>| <number>]\n\nWithout arguments all files are upda
 
 # function
 process_file () {
-  if [[ "$1" != *"."* ]]; then
-    echo "folder: $1"
-    find "$GIT" -type d -name $1 -exec cp -ri {} "$notebooks" \;
-  else 
-    echo "file: $file"
-    find "$GIT" -type f -name $1 -exec cp -i {} "$notebooks" \;
-    find "$notebooks" -type f -name "*.ipynb". -exec chmod 644 {} \;
-  fi
+  find "$GIT" -type d -name $1 -exec cp -ri {} "$notebooks" \;
+  find "$GIT" -type f -name $1 -exec cp -i {} "$notebooks" \;
+  find "$notebooks" -type f -name "*.ipynb". -exec chmod 644 {} \;
 }
 
 # parse args 
@@ -34,12 +29,11 @@ else
   unset 'args[0]'
 fi
 
-# use without arguments, just update everything
+# update everything
 if [[ "$options" == "-f" ]]; then
   git -C $GIT  reset --hard HEAD.
 fi
 
-# update everything
 git -C $GIT pull
 find "$GIT" -type f -name "*.ipynb" -exec chmod 444 {} \;
 
@@ -53,11 +47,9 @@ for item in "${args[@]}"; do
     for file in ${files[@]}; do
       process_file $file
     done
-    echo "done"
   else
     process_file $item
-#    find "$GIT" -type f -name ${item} -exec cp -i {} "$notebooks" \;
-#    chmod 644 "$notebooks/$item"
+    find "$GIT" -type f -name ${item} -exec cp -i {} "$notebooks" \;
   fi  
 done
 
